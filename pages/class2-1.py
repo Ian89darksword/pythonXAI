@@ -31,3 +31,8 @@ print(int(a))  # 證明透過input()輸入內容都是字串
 radius = float(input("請輸入半徑: "))  # 輸入半徑
 area = 3.14 * radius * radius  # 計算圓面積
 print(f"半徑: {radius} 圓面積: {area}")
+
+# 計算圓周率
+radius = float(input("請輸入半徑: "))  # 輸入半徑
+circumference = 2 * 3.14 * radius  # 計算圓周率
+print(f"半徑: {radius} 圓周率: {circumference}")
