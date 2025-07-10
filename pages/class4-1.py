@@ -44,35 +44,30 @@ for i in range(len(cols)):
 
 st.write("---")
 st.title("columns排列元件效果比較")
-(
-    col1,
-    col2,
-) = st.columns(
-    2
-)  # 3columns
+
+col1, col2 = st.columns(2)  # 3columns
 with col1:
     st.button("按鈕1", key="btn10")
     st.button("按鈕2", key="btn11")
     st.button("按鈕3", key="btn12")
 with col2:
-    st.button("按鈕4", key="btn13")
-    st.button("按鈕5", key="btn14")
-    st.button("按鈕6", key="btn15")
+    st.write("col2")
+    st.write("col2")
+    st.write("col2")
 
 st.write("---")
 # 開3個row, 2個columns
 for i in range(3):
     col1, col2 = st.columns(2)  # 2columns
     with col1:
-        st.button(f"按鈕{i+1}", key=f"排版測試{i+4}")
+        st.button(f"按鈕{i+1}", key=f"排版測試_{i+4}")
     with col2:
-        st.button(f"按鈕{i+1}", key=f"排版測試{i+5}")
+        st.write("col2")
 
 st.write("---")
 st.title("文件輸入元件")
 text = st.text_input("請輸入文字", key="text_input")
-file = st.file_uploader("請選擇檔案", key="這是預設文字")
-st.write(f"")
+st.write(f"text={text}")
 
 st.write("---")
 st.title("session state")
@@ -82,10 +77,10 @@ if st.button("接下去ans加1", key="ans"):
 st.write(f"ans={ans}")
 
 # session_state
-if "ans" not in st.session_state:
+if "ans1" not in st.session_state:
     st.session_state.ans1 = 1
 
-if st.button("接下去ans加1", key="ans"):
+if st.button("接下去ans加1", key="ans2"):
     st.session_state.ans1 = st.session_state.ans1 + 1
 st.write(f"ans={st.session_state.ans1}")
 
