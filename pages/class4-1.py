@@ -1,22 +1,12 @@
 import streamlit as st
 
 st.title("欄位元件")
-(
-    col1,
-    col2,
-) = st.columns(
-    2
-)  # 2columns
+col1, col2 = st.columns(2)  # 2columns
 col1.button("按鈕1", key="btn1")  # co中建立一個按鈕類似st.button("按鈕1")
 col1.button("按鈕2", key="btn2")  # co中建立一個按鈕類似st.button("按鈕2")
 
 # 2columns, 可以用比例來設定每個column的寬度,將比例放到list中
-(
-    col1,
-    col2,
-) = st.columns(
-    [1, 2]
-)  # 2columns
+col1, col2 = st.columns([1, 2])  # 2columns
 col1.button("按鈕3", key="btn3")  # co中建立一個按鈕類似st.button("按鈕3")
 col2.button("按鈕4", key="btn4")  # co中建立一個按鈕類似st.button("按鈕4")
 # 3columns
